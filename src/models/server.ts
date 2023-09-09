@@ -12,6 +12,7 @@ class Server {
     this.routing();
     this.connectDB();
     this.port = "3000"; //env file not available
+    this.middlewares();
   }
 
   routing = () => {
@@ -26,6 +27,10 @@ class Server {
     this.app.listen(this.port, () => {
       console.log("Server is running on port 3000");
     });
+  };
+
+  middlewares = () => {
+    this.app.use(express.json());
   };
 }
 
