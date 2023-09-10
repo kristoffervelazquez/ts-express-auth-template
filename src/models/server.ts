@@ -1,6 +1,6 @@
 import express, { Application } from "express";
-import authRouter from "../routes/authRouter.js";
-import conectarDB from "../config/db.js";
+import authRouter from "../routes/authRouter";
+import conectarDB from "../config/db";
 class Server {
   private app: Application;
   private port: string;
